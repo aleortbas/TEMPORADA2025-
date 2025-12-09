@@ -11,7 +11,7 @@ namespace TEMPORADA2025_
     {
         private readonly EquipoRepository _equipoRepository;
 
-        public EquipoService(string connectionString)
+        public EquipoService()
         {
             _equipoRepository = new EquipoRepository();
         }

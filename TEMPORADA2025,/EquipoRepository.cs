@@ -29,5 +29,32 @@ namespace TEMPORADA2025_
                 }
             }
         }
+        public List<anosEquipos> GetAñosEquipos()
+        {
+            var startList = new List<anosEquipos>();
+
+            string query = "select codigo_equipo, nombre, año from equipos where año between '1900-01-01' and '1950-12-31';";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var equipo = new anosEquipos // Change the type to 'anosEquipos' to match the list type
+                            {
+                                CodigoEquipo = reader["codigo_equipo"].ToString(),
+                                Nombre = reader["nombre"].ToString(),
+                                Año = Convert.ToDateTime(reader["año"])
+                            };
+                            startList.Add(equipo);
+                        }
+                    }
+                }
+            }
+            return startList;
+        }
     }
 }

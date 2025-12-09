@@ -15,26 +15,11 @@ namespace TEMPORADA2025_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            StringBuilder sb = new StringBuilder();
+            Form2 form2 = new Form2(this);
 
-            try
-            {
-                var futbolistas = futbolistaRepository.GetAllFutbolistas();
+            form2.Show();
 
-                foreach (var f in futbolistas)
-                {
-                    // Format the output: ID | Name and add a new line
-                    sb.AppendLine($"{f.Identificacion} | {f.NombreFutbolista}");
-                }
-
-                // Set the TextBox text
-                txtNombreEquipo.Text = sb.ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Database Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            this.Hide();
         }
         private void txtFutbolistasList_TextChanged(object sender, EventArgs e)
         {
