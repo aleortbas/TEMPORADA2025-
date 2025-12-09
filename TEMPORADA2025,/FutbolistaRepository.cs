@@ -5,7 +5,7 @@ using TEMPORADA2025_.Models;
 
 namespace TEMPORADA2025_
 {
-    public class FutbolistaRepository
+    public class FutbolistaRepository()
     {
         private readonly string connectionString = ConfigurationManager.ConnectionStrings["TEMPORADA2025"].ConnectionString;
 
@@ -27,7 +27,7 @@ namespace TEMPORADA2025_
                             var futbolista = new Futbolista
                             {
                                 Identificacion = reader.GetString(0),
-                                MombreFutbolista = reader.GetString(1)
+                                NombreFutbolista = reader.GetString(1)
                             };
                             futbolistas.Add(futbolista);
                         }
@@ -35,6 +35,31 @@ namespace TEMPORADA2025_
                 }
             }
             return futbolistas;
+        }
+    
+
+    public void InsertaFutbolista(Futbolista futbolista)
+        {
+            string query = "INSERT INTO futbolistas (identificacion, nombre_futbolista, equipo, edad,goles, nacionalidad, posicion, lesiones) " +
+                "VALUES (@identificacion, @nombre_futbolista, @equipo, @edad, @goles, @nacionalidad, @posicion, @lesiones)";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@identificacion", futbolista.Identificacion);
+                    command.Parameters.AddWithValue("@nombre_futbolista", futbolista.NombreFutbolista);
+                    command.Parameters.AddWithValue("@equipo", "FCB");
+                    command.Parameters.AddWithValue("@edad", futbolista.Edad);
+                    command.Parameters.AddWithValue("@goles", futbolista.Goles);
+                    command.Parameters.AddWithValue("@nacionalidad", futbolista.Nacionalidad);
+                    command.Parameters.AddWithValue("@posicion", futbolista.Posicion);
+                    command.Parameters.AddWithValue("@lesiones", futbolista.Lesiones);
+
+                    connection.Open();
+
+                    command.ExecuteNonQuery();
+                }
+            }
         }
     }
 }

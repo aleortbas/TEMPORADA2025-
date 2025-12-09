@@ -1,5 +1,6 @@
 
 using System.Text;
+using TEMPORADA2025_.Models;
 
 namespace TEMPORADA2025_
 {
@@ -22,10 +23,11 @@ namespace TEMPORADA2025_
                 foreach (var f in futbolistas)
                 {
                     // Format the output: ID | Name and add a new line
-                    sb.AppendLine($"{f.Identificacion} | {f.MombreFutbolista}");
+                    sb.AppendLine($"{f.Identificacion} | {f.NombreFutbolista}");
                 }
 
                 // Set the TextBox text
+                txtNombreEquipo.Text = sb.ToString();
             }
             catch (Exception ex)
             {
@@ -33,8 +35,87 @@ namespace TEMPORADA2025_
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void txtFutbolistasList_TextChanged(object sender, EventArgs e)
+        {
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        }
+
+        private void addEquipo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addFutbolista_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var newPlayer = new Futbolista
+                {
+                    Identificacion = Guid.NewGuid().ToString().Substring(0, 8), // Example ID generation
+                    NombreFutbolista = txtNombreFutbolista.Text,
+                    Equipo = txtEquipo.Text,
+                    Edad = int.TryParse(txtEquipo.Text, out int edad) ? edad : 0,
+                    Goles = int.TryParse(txtGoles.Text, out int goles) ? goles: 0,
+                    Nacionalidad = txtNacionalidad.Text,
+                    Posicion = posicion.Text,
+                    Lesiones = siLesion.Checked ? true : false
+                };
+                futbolistaRepository.InsertaFutbolista(newPlayer);
+                MessageBox.Show("Futbolista insertado!", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show($"Validation Error: {ex.Message}", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Database Error: {ex.Message}", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEquipo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void posicion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
         }

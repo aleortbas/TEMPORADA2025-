@@ -10,7 +10,7 @@ namespace TEMPORADA2025_.Models
     public class Futbolista
     {
         public string Identificacion { get; set; }
-        public string MombreFutbolista { get; set; }
+        public string NombreFutbolista { get; set; }
         public string Equipo { get; set; } // Foreign Key
         public int Edad { get; set; }
         public int Goles { get; set; }
