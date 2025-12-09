@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace TEMPORADA2025_.Models
 {
-    internal class Equipo
+    public class Equipos
     {
+        public string CodigoEquipo { get; set; }
+        public string Nombre { get; set; }
+        public string Pais { get; set; }
+        public string Categoria { get; set; }
+        public DateTime Año { get; set; }
+        public string presupuesto { get; set; }
     }
 }

@@ -35,11 +35,9 @@
             addFutbolista = new Button();
             pais = new Label();
             txtPaisEquipo = new TextBox();
-            txtCategoria = new TextBox();
             categoria = new Label();
             txtPresupuesto = new TextBox();
             presupuesto = new Label();
-            txtAño = new TextBox();
             año = new Label();
             txtNacionalidad = new TextBox();
             label1 = new Label();
@@ -56,6 +54,10 @@
             posicion = new ComboBox();
             siLesion = new RadioButton();
             noLesion = new RadioButton();
+            Acategoria = new RadioButton();
+            Bcategoria = new RadioButton();
+            Ccategoria = new RadioButton();
+            anoFundacion = new DateTimePicker();
             SuspendLayout();
             // 
             // button1
@@ -124,13 +126,6 @@
             txtPaisEquipo.Size = new Size(191, 27);
             txtPaisEquipo.TabIndex = 6;
             // 
-            // txtCategoria
-            // 
-            txtCategoria.Location = new Point(12, 153);
-            txtCategoria.Name = "txtCategoria";
-            txtCategoria.Size = new Size(191, 27);
-            txtCategoria.TabIndex = 8;
-            // 
             // categoria
             // 
             categoria.AutoSize = true;
@@ -156,13 +151,6 @@
             presupuesto.Size = new Size(89, 20);
             presupuesto.TabIndex = 11;
             presupuesto.Text = "Presupuesto";
-            // 
-            // txtAño
-            // 
-            txtAño.Location = new Point(12, 208);
-            txtAño.Name = "txtAño";
-            txtAño.Size = new Size(191, 27);
-            txtAño.TabIndex = 10;
             // 
             // año
             // 
@@ -308,12 +296,53 @@
             noLesion.UseVisualStyleBackColor = true;
             noLesion.CheckedChanged += radioButton2_CheckedChanged;
             // 
+            // Acategoria
+            // 
+            Acategoria.AutoSize = true;
+            Acategoria.Location = new Point(12, 158);
+            Acategoria.Name = "Acategoria";
+            Acategoria.Size = new Size(40, 24);
+            Acategoria.TabIndex = 29;
+            Acategoria.Text = "A";
+            Acategoria.UseVisualStyleBackColor = true;
+            // 
+            // Bcategoria
+            // 
+            Bcategoria.AutoSize = true;
+            Bcategoria.Location = new Point(58, 158);
+            Bcategoria.Name = "Bcategoria";
+            Bcategoria.Size = new Size(39, 24);
+            Bcategoria.TabIndex = 30;
+            Bcategoria.Text = "B";
+            Bcategoria.UseVisualStyleBackColor = true;
+            // 
+            // Ccategoria
+            // 
+            Ccategoria.AutoSize = true;
+            Ccategoria.Location = new Point(104, 158);
+            Ccategoria.Name = "Ccategoria";
+            Ccategoria.Size = new Size(39, 24);
+            Ccategoria.TabIndex = 31;
+            Ccategoria.Text = "C";
+            Ccategoria.UseVisualStyleBackColor = true;
+            // 
+            // anoFundacion
+            // 
+            anoFundacion.Location = new Point(12, 208);
+            anoFundacion.Name = "anoFundacion";
+            anoFundacion.Size = new Size(250, 27);
+            anoFundacion.TabIndex = 32;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(724, 669);
+            Controls.Add(anoFundacion);
+            Controls.Add(Ccategoria);
+            Controls.Add(Bcategoria);
+            Controls.Add(Acategoria);
             Controls.Add(noLesion);
             Controls.Add(siLesion);
             Controls.Add(posicion);
@@ -331,9 +360,7 @@
             Controls.Add(label5);
             Controls.Add(txtPresupuesto);
             Controls.Add(presupuesto);
-            Controls.Add(txtAño);
             Controls.Add(año);
-            Controls.Add(txtCategoria);
             Controls.Add(categoria);
             Controls.Add(txtPaisEquipo);
             Controls.Add(pais);
@@ -357,7 +384,6 @@
         private Button addFutbolista;
         private Label pais;
         private TextBox txtPaisEquipo;
-        private TextBox txtCategoria;
         private Label categoria;
         private TextBox txtPresupuesto;
         private Label presupuesto;
@@ -379,5 +405,9 @@
         private ComboBox posicion;
         private RadioButton siLesion;
         private RadioButton noLesion;
+        private RadioButton Acategoria;
+        private RadioButton Bcategoria;
+        private RadioButton Ccategoria;
+        private DateTimePicker anoFundacion;
     }
 }

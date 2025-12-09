@@ -7,6 +7,7 @@ namespace TEMPORADA2025_
     public partial class Form1 : Form
     {
         private readonly FutbolistaRepository futbolistaRepository = new FutbolistaRepository();
+        private readonly EquipoRepository equipoRepository = new EquipoRepository();
         public Form1()
         {
             InitializeComponent();
@@ -42,7 +43,32 @@ namespace TEMPORADA2025_
 
         private void addEquipo_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int yearSelected = anoFundacion.Value.Year;
+                DateTime dateOfFoundation = new DateTime(yearSelected, 1, 1);
 
+                var newPlayer = new Equipos
+                {
+                    CodigoEquipo= txtNombreEquipo.Text,
+                    Nombre = txtNombreEquipo.Text,
+                    Pais = txtPaisEquipo.Text,
+                    Categoria = Acategoria.Text,
+                    Año = dateOfFoundation,
+                    presupuesto = txtPresupuesto.Text
+                };
+                equipoRepository.InsertarEquipos(newPlayer);
+                MessageBox.Show("Equipo insertado!", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show($"Validation Error: {ex.Message}", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Database Error: {ex.Message}", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -48,7 +48,7 @@ namespace TEMPORADA2025_
                 {
                     command.Parameters.AddWithValue("@identificacion", futbolista.Identificacion);
                     command.Parameters.AddWithValue("@nombre_futbolista", futbolista.NombreFutbolista);
-                    command.Parameters.AddWithValue("@equipo", "FCB");
+                    command.Parameters.AddWithValue("@equipo", "prb");
                     command.Parameters.AddWithValue("@edad", futbolista.Edad);
                     command.Parameters.AddWithValue("@goles", futbolista.Goles);
                     command.Parameters.AddWithValue("@nacionalidad", futbolista.Nacionalidad);
