@@ -10,23 +10,17 @@ namespace TEMPORADA2025_
     public class EquipoService
     {
         private readonly EquipoRepository _equipoRepository;
+        private readonly EquipoRepository _repository = new EquipoRepository();
 
         public EquipoService()
         {
             _equipoRepository = new EquipoRepository();
         }
 
-        public void SaveNewEquipo(Futbolista newEquipo)
+        public List<ListaEquipos> LoadTeams()
         {
-            // 1. BUSINESS RULE VALIDATION
-            if (string.IsNullOrWhiteSpace(newEquipo.Equipo))
-            {
-                throw new ArgumentException("The footballer's name cannot be empty.");
-            }
-            if (newEquipo.Edad < 16)
-            {
-                throw new ArgumentException("The footballer must be at least 16 years old.");
-            }
+            // Simple pass-through method
+            return _repository.GetTeamListForComboBox();
         }
     }
 }

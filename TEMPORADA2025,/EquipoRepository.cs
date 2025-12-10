@@ -56,5 +56,31 @@ namespace TEMPORADA2025_
             }
             return startList;
         }
+        public List<ListaEquipos> GetTeamListForComboBox()
+        {
+            var teamList = new List<ListaEquipos>();
+            string query = "SELECT codigo_equipo, nombre FROM equipos ORDER BY nombre";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var item = new ListaEquipos
+                            {
+                                Codigo = reader["codigo_equipo"].ToString(),
+                                Nombre = reader["nombre"].ToString()
+                            };
+                            teamList.Add(item);
+                        }
+                    }
+                }
+            }
+            return teamList;
+        }
     }
 }

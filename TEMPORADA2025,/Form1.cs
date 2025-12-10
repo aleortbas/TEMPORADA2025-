@@ -8,6 +8,7 @@ namespace TEMPORADA2025_
     {
         private readonly FutbolistaRepository futbolistaRepository = new FutbolistaRepository();
         private readonly EquipoRepository equipoRepository = new EquipoRepository();
+        private readonly EquipoService _equipoService = new EquipoService();
         public Form1()
         {
             InitializeComponent();
@@ -74,8 +75,8 @@ namespace TEMPORADA2025_
                 {
                     Identificacion = Guid.NewGuid().ToString().Substring(0, 8), // Example ID generation
                     NombreFutbolista = txtNombreFutbolista.Text,
-                    Equipo = txtEquipo.Text,
-                    Edad = int.TryParse(txtEquipo.Text, out int edad) ? edad : 0,
+                    Equipo = listaEquipos.SelectedValue.ToString(),
+                    Edad = int.TryParse(txtEdad.Text, out int edad) ? edad : 0,
                     Goles = int.TryParse(txtGoles.Text, out int goles) ? goles : 0,
                     Nacionalidad = txtNacionalidad.Text,
                     Posicion = posicion.Text,
@@ -150,6 +151,49 @@ namespace TEMPORADA2025_
                     e.Handled = true;
                 }
             }
+        }
+
+        private void LoadTeamsIntoComboBox()
+        {
+            try
+            {
+                // 1. Get the list of DTOs from the service layer
+                List<ListaEquipos> teams = _equipoService.LoadTeams();
+
+                // 2. Set the DataSource: This is the list of objects that populates the ComboBox
+                listaEquipos.DataSource = teams;
+
+                // 3. Set the DisplayMember: This is the property that the user will SEE in the list
+                listaEquipos.DisplayMember = "NOMBRE";
+
+                // 4. Set the ValueMember: This is the property that will be stored when an item is selected
+                listaEquipos.ValueMember = "CODIGO";
+
+                // Optional: Select the first item by default
+                if (listaEquipos.Items.Count > 0)
+                {
+                    listaEquipos.SelectedIndex = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading teams: {ex.Message}", "Data Load Error");
+            }
+        }
+
+        // Example: Reading the selected value
+        private void btnSavePlayer_Click(object sender, EventArgs e)
+        {
+            string selectedTeamCode = listaEquipos.SelectedValue?.ToString();
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.LoadTeamsIntoComboBox();
         }
     }
 }

@@ -45,7 +45,6 @@
             label2 = new Label();
             txtEdad = new TextBox();
             label3 = new Label();
-            txtEquipo = new TextBox();
             label4 = new Label();
             txtNombreFutbolista = new TextBox();
             label5 = new Label();
@@ -60,6 +59,7 @@
             anoFundacion = new DateTimePicker();
             Codigo = new Label();
             codigoEquipo = new TextBox();
+            listaEquipos = new ComboBox();
             SuspendLayout();
             // 
             // cambioForm
@@ -212,14 +212,6 @@
             label3.TabIndex = 17;
             label3.Text = "Edad";
             // 
-            // txtEquipo
-            // 
-            txtEquipo.Location = new Point(430, 95);
-            txtEquipo.Name = "txtEquipo";
-            txtEquipo.Size = new Size(191, 27);
-            txtEquipo.TabIndex = 16;
-            txtEquipo.TextChanged += txtEquipo_TextChanged;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -354,12 +346,23 @@
             codigoEquipo.TextChanged += codigoEquipo_TextChanged;
             codigoEquipo.KeyPress += codigoEquipo_KeyPress;
             // 
+            // listaEquipos
+            // 
+            listaEquipos.FormattingEnabled = true;
+            listaEquipos.Items.AddRange(new object[] { "Arquero", "Defensa", "Medio", "Delantero" });
+            listaEquipos.Location = new Point(430, 99);
+            listaEquipos.Name = "listaEquipos";
+            listaEquipos.Size = new Size(191, 28);
+            listaEquipos.TabIndex = 35;
+            listaEquipos.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(724, 669);
+            Controls.Add(listaEquipos);
             Controls.Add(codigoEquipo);
             Controls.Add(Codigo);
             Controls.Add(anoFundacion);
@@ -377,7 +380,6 @@
             Controls.Add(label2);
             Controls.Add(txtEdad);
             Controls.Add(label3);
-            Controls.Add(txtEquipo);
             Controls.Add(label4);
             Controls.Add(txtNombreFutbolista);
             Controls.Add(label5);
@@ -394,6 +396,7 @@
             Controls.Add(cambioForm);
             Name = "Form1";
             Text = "TEMPORADA2025,";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -418,7 +421,6 @@
         private Label label2;
         private TextBox txtEdad;
         private Label label3;
-        private TextBox txtEquipo;
         private Label label4;
         private TextBox txtNombreFutbolista;
         private Label label5;
@@ -434,5 +436,6 @@
         private DateTimePicker anoFundacion;
         private Label Codigo;
         private TextBox codigoEquipo;
+        private ComboBox listaEquipos;
     }
 }
