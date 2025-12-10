@@ -90,5 +90,33 @@ namespace TEMPORADA2025_
             }
             return startList;
         }
+        public List<ArquerosCategoria> GetArquerosCategoria()
+        {
+            var startList = new List<ArquerosCategoria>();
+
+            string query = "select e.nombre, f.nombre_futbolista from futbolistas f " +
+                "inner join equipos e on f.equipo = e.codigo_equipo " +
+                " where f.posicion = 'Arquero' and e.categoria = 'C'; ";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var categoriaArqueros = new ArquerosCategoria
+                            {
+                                NombreEquipo = reader.GetString(0),
+                                NombreFutbolista = reader.GetString(1)
+                            };
+                            startList.Add(categoriaArqueros);
+                        }
+                    }
+                }
+            }
+            return startList;
+        }
     }
 }

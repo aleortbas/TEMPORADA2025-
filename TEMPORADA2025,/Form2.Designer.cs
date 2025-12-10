@@ -32,6 +32,7 @@
             mostrarEquiposAno = new Button();
             BttVolver = new Button();
             button1 = new Button();
+            ArqueroCategoria = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvAno).BeginInit();
             SuspendLayout();
             // 
@@ -75,11 +76,22 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // ArqueroCategoria
+            // 
+            ArqueroCategoria.Location = new Point(491, 347);
+            ArqueroCategoria.Name = "ArqueroCategoria";
+            ArqueroCategoria.Size = new Size(154, 29);
+            ArqueroCategoria.TabIndex = 4;
+            ArqueroCategoria.Text = "arquero Categoria";
+            ArqueroCategoria.UseVisualStyleBackColor = true;
+            ArqueroCategoria.Click += ArqueroCategoria_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(ArqueroCategoria);
             Controls.Add(button1);
             Controls.Add(BttVolver);
             Controls.Add(mostrarEquiposAno);
@@ -96,5 +108,6 @@
         private Button mostrarEquiposAno;
         private Button BttVolver;
         private Button button1;
+        private Button ArqueroCategoria;
     }
 }

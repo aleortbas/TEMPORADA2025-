@@ -15,6 +15,7 @@ namespace TEMPORADA2025_
     {
         private readonly EquipoRepository equipoRepository = new EquipoRepository();
         private readonly FutbolistaRepository futbolistaRepository = new FutbolistaRepository();
+
         private Form1 _callingForm;
         public Form2(Form1 callingForm)
         {
@@ -70,6 +71,28 @@ namespace TEMPORADA2025_
                 dgvAno.DataSource = results;
 
                 // Optional: Customize column headers after setting the source
+                if (dgvAno.Columns.Contains("NombreEquipo"))
+                {
+                    dgvAno.Columns["NombreEquipo"].HeaderText = "Equipo";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading data: {ex.Message}", "Database Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ArqueroCategoria_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // 1. Get the data from the service layer
+                List<ArquerosCategoria> results = futbolistaRepository.GetArquerosCategoria();
+
+                // 2. Set the data source of the DataGridView
+                dgvAno.DataSource = results;
+
                 if (dgvAno.Columns.Contains("NombreEquipo"))
                 {
                     dgvAno.Columns["NombreEquipo"].HeaderText = "Equipo";
