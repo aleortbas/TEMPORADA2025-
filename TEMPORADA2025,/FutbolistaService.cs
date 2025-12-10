@@ -11,11 +11,6 @@ namespace TEMPORADA2025_
             _futbolistaRepository = new FutbolistaRepository();
         }
 
-        public List<Futbolista> GetAllFutbolistas()
-        {
-            return _futbolistaRepository.GetAllFutbolistas();
-        }
-
         public void SaveNewPlayer(Futbolista newPlayer)
         {
             // 1. BUSINESS RULE VALIDATION

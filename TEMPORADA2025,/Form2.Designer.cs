@@ -33,6 +33,7 @@
             BttVolver = new Button();
             button1 = new Button();
             ArqueroCategoria = new Button();
+            nombresFutbolistas = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvAno).BeginInit();
             SuspendLayout();
             // 
@@ -86,11 +87,22 @@
             ArqueroCategoria.UseVisualStyleBackColor = true;
             ArqueroCategoria.Click += ArqueroCategoria_Click;
             // 
+            // nombresFutbolistas
+            // 
+            nombresFutbolistas.Location = new Point(31, 347);
+            nombresFutbolistas.Name = "nombresFutbolistas";
+            nombresFutbolistas.Size = new Size(125, 29);
+            nombresFutbolistas.TabIndex = 5;
+            nombresFutbolistas.Text = "nombre futbolista";
+            nombresFutbolistas.UseVisualStyleBackColor = true;
+            nombresFutbolistas.Click += nombresFutbolistas_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(nombresFutbolistas);
             Controls.Add(ArqueroCategoria);
             Controls.Add(button1);
             Controls.Add(BttVolver);
@@ -109,5 +121,6 @@
         private Button BttVolver;
         private Button button1;
         private Button ArqueroCategoria;
+        private Button nombresFutbolistas;
     }
 }

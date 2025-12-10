@@ -104,5 +104,27 @@ namespace TEMPORADA2025_
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void nombresFutbolistas_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // 1. Get the data from the service layer
+                List<FutbolistasNombres> results = futbolistaRepository.GetFutbolistasNombres();
+
+                // 2. Set the data source of the DataGridView
+                dgvAno.DataSource = results;
+
+                if (dgvAno.Columns.Contains("NombreEquipo"))
+                {
+                    dgvAno.Columns["NombreEquipo"].HeaderText = "Equipo";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading data: {ex.Message}", "Database Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
