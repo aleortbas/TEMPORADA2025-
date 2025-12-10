@@ -58,6 +58,8 @@
             Bcategoria = new RadioButton();
             Ccategoria = new RadioButton();
             anoFundacion = new DateTimePicker();
+            Codigo = new Label();
+            codigoEquipo = new TextBox();
             SuspendLayout();
             // 
             // cambioForm
@@ -74,7 +76,7 @@
             // nombreEquipo
             // 
             nombreEquipo.AutoSize = true;
-            nombreEquipo.Location = new Point(12, 9);
+            nombreEquipo.Location = new Point(12, 72);
             nombreEquipo.Name = "nombreEquipo";
             nombreEquipo.Size = new Size(64, 20);
             nombreEquipo.TabIndex = 1;
@@ -84,7 +86,7 @@
             // txtNombreEquipo
             // 
             txtNombreEquipo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtNombreEquipo.Location = new Point(12, 32);
+            txtNombreEquipo.Location = new Point(12, 95);
             txtNombreEquipo.Name = "txtNombreEquipo";
             txtNombreEquipo.Size = new Size(191, 27);
             txtNombreEquipo.TabIndex = 2;
@@ -92,7 +94,7 @@
             // 
             // addEquipo
             // 
-            addEquipo.Location = new Point(12, 310);
+            addEquipo.Location = new Point(12, 373);
             addEquipo.Name = "addEquipo";
             addEquipo.Size = new Size(94, 29);
             addEquipo.TabIndex = 3;
@@ -113,7 +115,7 @@
             // pais
             // 
             pais.AutoSize = true;
-            pais.Location = new Point(12, 72);
+            pais.Location = new Point(12, 135);
             pais.Name = "pais";
             pais.Size = new Size(34, 20);
             pais.TabIndex = 5;
@@ -121,7 +123,7 @@
             // 
             // txtPaisEquipo
             // 
-            txtPaisEquipo.Location = new Point(12, 95);
+            txtPaisEquipo.Location = new Point(12, 158);
             txtPaisEquipo.Name = "txtPaisEquipo";
             txtPaisEquipo.Size = new Size(191, 27);
             txtPaisEquipo.TabIndex = 6;
@@ -129,7 +131,7 @@
             // categoria
             // 
             categoria.AutoSize = true;
-            categoria.Location = new Point(12, 130);
+            categoria.Location = new Point(12, 193);
             categoria.Name = "categoria";
             categoria.Size = new Size(74, 20);
             categoria.TabIndex = 7;
@@ -138,7 +140,7 @@
             // 
             // txtPresupuesto
             // 
-            txtPresupuesto.Location = new Point(12, 266);
+            txtPresupuesto.Location = new Point(12, 329);
             txtPresupuesto.Name = "txtPresupuesto";
             txtPresupuesto.Size = new Size(191, 27);
             txtPresupuesto.TabIndex = 12;
@@ -146,7 +148,7 @@
             // presupuesto
             // 
             presupuesto.AutoSize = true;
-            presupuesto.Location = new Point(12, 243);
+            presupuesto.Location = new Point(12, 306);
             presupuesto.Name = "presupuesto";
             presupuesto.Size = new Size(89, 20);
             presupuesto.TabIndex = 11;
@@ -155,7 +157,7 @@
             // año
             // 
             año.AutoSize = true;
-            año.Location = new Point(12, 185);
+            año.Location = new Point(12, 248);
             año.Name = "año";
             año.Size = new Size(36, 20);
             año.TabIndex = 9;
@@ -299,7 +301,7 @@
             // Acategoria
             // 
             Acategoria.AutoSize = true;
-            Acategoria.Location = new Point(12, 158);
+            Acategoria.Location = new Point(12, 221);
             Acategoria.Name = "Acategoria";
             Acategoria.Size = new Size(40, 24);
             Acategoria.TabIndex = 29;
@@ -309,7 +311,7 @@
             // Bcategoria
             // 
             Bcategoria.AutoSize = true;
-            Bcategoria.Location = new Point(58, 158);
+            Bcategoria.Location = new Point(58, 221);
             Bcategoria.Name = "Bcategoria";
             Bcategoria.Size = new Size(39, 24);
             Bcategoria.TabIndex = 30;
@@ -319,7 +321,7 @@
             // Ccategoria
             // 
             Ccategoria.AutoSize = true;
-            Ccategoria.Location = new Point(104, 158);
+            Ccategoria.Location = new Point(104, 221);
             Ccategoria.Name = "Ccategoria";
             Ccategoria.Size = new Size(39, 24);
             Ccategoria.TabIndex = 31;
@@ -328,10 +330,29 @@
             // 
             // anoFundacion
             // 
-            anoFundacion.Location = new Point(12, 208);
+            anoFundacion.Location = new Point(12, 271);
             anoFundacion.Name = "anoFundacion";
             anoFundacion.Size = new Size(250, 27);
             anoFundacion.TabIndex = 32;
+            // 
+            // Codigo
+            // 
+            Codigo.AutoSize = true;
+            Codigo.Location = new Point(12, 9);
+            Codigo.Name = "Codigo";
+            Codigo.Size = new Size(58, 20);
+            Codigo.TabIndex = 33;
+            Codigo.Text = "Codigo";
+            // 
+            // codigoEquipo
+            // 
+            codigoEquipo.Location = new Point(12, 32);
+            codigoEquipo.MaxLength = 3;
+            codigoEquipo.Name = "codigoEquipo";
+            codigoEquipo.Size = new Size(191, 27);
+            codigoEquipo.TabIndex = 34;
+            codigoEquipo.TextChanged += codigoEquipo_TextChanged;
+            codigoEquipo.KeyPress += codigoEquipo_KeyPress;
             // 
             // Form1
             // 
@@ -339,6 +360,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(724, 669);
+            Controls.Add(codigoEquipo);
+            Controls.Add(Codigo);
             Controls.Add(anoFundacion);
             Controls.Add(Ccategoria);
             Controls.Add(Bcategoria);
@@ -409,5 +432,7 @@
         private RadioButton Bcategoria;
         private RadioButton Ccategoria;
         private DateTimePicker anoFundacion;
+        private Label Codigo;
+        private TextBox codigoEquipo;
     }
 }

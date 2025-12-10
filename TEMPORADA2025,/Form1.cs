@@ -35,7 +35,7 @@ namespace TEMPORADA2025_
 
                 var newPlayer = new Equipos
                 {
-                    CodigoEquipo= txtNombreEquipo.Text,
+                    CodigoEquipo = txtNombreEquipo.Text,
                     Nombre = txtNombreEquipo.Text,
                     Pais = txtPaisEquipo.Text,
                     Categoria = Acategoria.Text,
@@ -76,7 +76,7 @@ namespace TEMPORADA2025_
                     NombreFutbolista = txtNombreFutbolista.Text,
                     Equipo = txtEquipo.Text,
                     Edad = int.TryParse(txtEquipo.Text, out int edad) ? edad : 0,
-                    Goles = int.TryParse(txtGoles.Text, out int goles) ? goles: 0,
+                    Goles = int.TryParse(txtGoles.Text, out int goles) ? goles : 0,
                     Nacionalidad = txtNacionalidad.Text,
                     Posicion = posicion.Text,
                     Lesiones = siLesion.Checked ? true : false
@@ -129,6 +129,27 @@ namespace TEMPORADA2025_
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void codigoEquipo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void codigoEquipo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar))
+            {
+                if (!char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
         }
     }
 }
