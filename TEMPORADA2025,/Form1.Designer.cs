@@ -69,12 +69,13 @@
             cambioForm.Name = "cambioForm";
             cambioForm.Size = new Size(700, 55);
             cambioForm.TabIndex = 0;
-            cambioForm.Text = "Cambiar";
+            cambioForm.Text = "Ir a estadisticas";
             cambioForm.UseVisualStyleBackColor = true;
             cambioForm.Click += button1_Click;
             // 
             // nombreEquipo
             // 
+            nombreEquipo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             nombreEquipo.AutoSize = true;
             nombreEquipo.Location = new Point(12, 72);
             nombreEquipo.Name = "nombreEquipo";
@@ -85,15 +86,16 @@
             // 
             // txtNombreEquipo
             // 
-            txtNombreEquipo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtNombreEquipo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtNombreEquipo.Location = new Point(12, 95);
             txtNombreEquipo.Name = "txtNombreEquipo";
-            txtNombreEquipo.Size = new Size(191, 27);
+            txtNombreEquipo.Size = new Size(253, 27);
             txtNombreEquipo.TabIndex = 2;
             txtNombreEquipo.TextChanged += txtFutbolistasList_TextChanged;
             // 
             // addEquipo
             // 
+            addEquipo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             addEquipo.Location = new Point(12, 373);
             addEquipo.Name = "addEquipo";
             addEquipo.Size = new Size(94, 29);
@@ -104,7 +106,8 @@
             // 
             // addFutbolista
             // 
-            addFutbolista.Location = new Point(527, 508);
+            addFutbolista.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            addFutbolista.Location = new Point(423, 513);
             addFutbolista.Name = "addFutbolista";
             addFutbolista.Size = new Size(94, 29);
             addFutbolista.TabIndex = 4;
@@ -114,6 +117,7 @@
             // 
             // pais
             // 
+            pais.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             pais.AutoSize = true;
             pais.Location = new Point(12, 135);
             pais.Name = "pais";
@@ -123,13 +127,15 @@
             // 
             // txtPaisEquipo
             // 
+            txtPaisEquipo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtPaisEquipo.Location = new Point(12, 158);
             txtPaisEquipo.Name = "txtPaisEquipo";
-            txtPaisEquipo.Size = new Size(191, 27);
+            txtPaisEquipo.Size = new Size(253, 27);
             txtPaisEquipo.TabIndex = 6;
             // 
             // categoria
             // 
+            categoria.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             categoria.AutoSize = true;
             categoria.Location = new Point(12, 193);
             categoria.Name = "categoria";
@@ -140,13 +146,15 @@
             // 
             // txtPresupuesto
             // 
+            txtPresupuesto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtPresupuesto.Location = new Point(12, 329);
             txtPresupuesto.Name = "txtPresupuesto";
-            txtPresupuesto.Size = new Size(191, 27);
+            txtPresupuesto.Size = new Size(253, 27);
             txtPresupuesto.TabIndex = 12;
             // 
             // presupuesto
             // 
+            presupuesto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             presupuesto.AutoSize = true;
             presupuesto.Location = new Point(12, 306);
             presupuesto.Name = "presupuesto";
@@ -156,6 +164,7 @@
             // 
             // año
             // 
+            año.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             año.AutoSize = true;
             año.Location = new Point(12, 248);
             año.Name = "año";
@@ -165,15 +174,17 @@
             // 
             // txtNacionalidad
             // 
-            txtNacionalidad.Location = new Point(430, 283);
+            txtNacionalidad.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            txtNacionalidad.Location = new Point(423, 284);
             txtNacionalidad.Name = "txtNacionalidad";
-            txtNacionalidad.Size = new Size(191, 27);
+            txtNacionalidad.Size = new Size(253, 27);
             txtNacionalidad.TabIndex = 22;
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Location = new Point(430, 260);
+            label1.Location = new Point(423, 261);
             label1.Name = "label1";
             label1.Size = new Size(98, 20);
             label1.TabIndex = 21;
@@ -182,15 +193,17 @@
             // 
             // txtGoles
             // 
-            txtGoles.Location = new Point(430, 221);
+            txtGoles.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            txtGoles.Location = new Point(423, 222);
             txtGoles.Name = "txtGoles";
-            txtGoles.Size = new Size(191, 27);
+            txtGoles.Size = new Size(253, 27);
             txtGoles.TabIndex = 20;
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Location = new Point(430, 198);
+            label2.Location = new Point(423, 199);
             label2.Name = "label2";
             label2.Size = new Size(46, 20);
             label2.TabIndex = 19;
@@ -198,15 +211,17 @@
             // 
             // txtEdad
             // 
-            txtEdad.Location = new Point(430, 153);
+            txtEdad.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            txtEdad.Location = new Point(423, 154);
             txtEdad.Name = "txtEdad";
-            txtEdad.Size = new Size(191, 27);
+            txtEdad.Size = new Size(253, 27);
             txtEdad.TabIndex = 18;
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label3.AutoSize = true;
-            label3.Location = new Point(430, 130);
+            label3.Location = new Point(423, 131);
             label3.Name = "label3";
             label3.Size = new Size(43, 20);
             label3.TabIndex = 17;
@@ -214,8 +229,9 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Location = new Point(430, 72);
+            label4.Location = new Point(423, 73);
             label4.Name = "label4";
             label4.Size = new Size(56, 20);
             label4.TabIndex = 15;
@@ -224,16 +240,17 @@
             // 
             // txtNombreFutbolista
             // 
-            txtNombreFutbolista.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtNombreFutbolista.Location = new Point(430, 32);
+            txtNombreFutbolista.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            txtNombreFutbolista.Location = new Point(423, 33);
             txtNombreFutbolista.Name = "txtNombreFutbolista";
-            txtNombreFutbolista.Size = new Size(191, 27);
+            txtNombreFutbolista.Size = new Size(253, 27);
             txtNombreFutbolista.TabIndex = 14;
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label5.AutoSize = true;
-            label5.Location = new Point(430, 9);
+            label5.Location = new Point(423, 10);
             label5.Name = "label5";
             label5.Size = new Size(64, 20);
             label5.TabIndex = 13;
@@ -241,8 +258,9 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label6.AutoSize = true;
-            label6.Location = new Point(430, 405);
+            label6.Location = new Point(423, 406);
             label6.Name = "label6";
             label6.Size = new Size(65, 20);
             label6.TabIndex = 23;
@@ -251,8 +269,9 @@
             // 
             // label7
             // 
+            label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             label7.AutoSize = true;
-            label7.Location = new Point(430, 322);
+            label7.Location = new Point(423, 323);
             label7.Name = "label7";
             label7.Size = new Size(63, 20);
             label7.TabIndex = 25;
@@ -260,18 +279,20 @@
             // 
             // posicion
             // 
+            posicion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             posicion.FormattingEnabled = true;
             posicion.Items.AddRange(new object[] { "Arquero", "Defensa", "Medio", "Delantero" });
-            posicion.Location = new Point(430, 359);
+            posicion.Location = new Point(423, 360);
             posicion.Name = "posicion";
-            posicion.Size = new Size(191, 28);
+            posicion.Size = new Size(253, 28);
             posicion.TabIndex = 26;
             posicion.SelectedIndexChanged += posicion_SelectedIndexChanged;
             // 
             // siLesion
             // 
+            siLesion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             siLesion.AutoSize = true;
-            siLesion.Location = new Point(430, 439);
+            siLesion.Location = new Point(423, 440);
             siLesion.Name = "siLesion";
             siLesion.Size = new Size(42, 24);
             siLesion.TabIndex = 27;
@@ -281,8 +302,9 @@
             // 
             // noLesion
             // 
+            noLesion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             noLesion.AutoSize = true;
-            noLesion.Location = new Point(430, 469);
+            noLesion.Location = new Point(423, 470);
             noLesion.Name = "noLesion";
             noLesion.Size = new Size(50, 24);
             noLesion.TabIndex = 28;
@@ -292,6 +314,7 @@
             // 
             // Acategoria
             // 
+            Acategoria.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             Acategoria.AutoSize = true;
             Acategoria.Location = new Point(12, 221);
             Acategoria.Name = "Acategoria";
@@ -302,6 +325,7 @@
             // 
             // Bcategoria
             // 
+            Bcategoria.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             Bcategoria.AutoSize = true;
             Bcategoria.Location = new Point(58, 221);
             Bcategoria.Name = "Bcategoria";
@@ -312,6 +336,7 @@
             // 
             // Ccategoria
             // 
+            Ccategoria.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             Ccategoria.AutoSize = true;
             Ccategoria.Location = new Point(104, 221);
             Ccategoria.Name = "Ccategoria";
@@ -322,13 +347,15 @@
             // 
             // anoFundacion
             // 
+            anoFundacion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             anoFundacion.Location = new Point(12, 271);
             anoFundacion.Name = "anoFundacion";
-            anoFundacion.Size = new Size(250, 27);
+            anoFundacion.Size = new Size(273, 27);
             anoFundacion.TabIndex = 32;
             // 
             // Codigo
             // 
+            Codigo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             Codigo.AutoSize = true;
             Codigo.Location = new Point(12, 9);
             Codigo.Name = "Codigo";
@@ -338,21 +365,23 @@
             // 
             // codigoEquipo
             // 
+            codigoEquipo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             codigoEquipo.Location = new Point(12, 32);
             codigoEquipo.MaxLength = 3;
             codigoEquipo.Name = "codigoEquipo";
-            codigoEquipo.Size = new Size(191, 27);
+            codigoEquipo.Size = new Size(253, 27);
             codigoEquipo.TabIndex = 34;
             codigoEquipo.TextChanged += codigoEquipo_TextChanged;
             codigoEquipo.KeyPress += codigoEquipo_KeyPress;
             // 
             // listaEquipos
             // 
+            listaEquipos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             listaEquipos.FormattingEnabled = true;
             listaEquipos.Items.AddRange(new object[] { "Arquero", "Defensa", "Medio", "Delantero" });
-            listaEquipos.Location = new Point(430, 99);
+            listaEquipos.Location = new Point(423, 100);
             listaEquipos.Name = "listaEquipos";
-            listaEquipos.Size = new Size(191, 28);
+            listaEquipos.Size = new Size(253, 28);
             listaEquipos.TabIndex = 35;
             listaEquipos.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 

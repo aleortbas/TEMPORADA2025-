@@ -38,11 +38,16 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvAno).BeginInit();
             SuspendLayout();
             // 
             // dgvAno
             // 
+            dgvAno.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvAno.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAno.Location = new Point(12, 12);
             dgvAno.Name = "dgvAno";
@@ -53,6 +58,7 @@
             // 
             // mostrarEquiposAno
             // 
+            mostrarEquiposAno.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             mostrarEquiposAno.Location = new Point(12, 402);
             mostrarEquiposAno.Name = "mostrarEquiposAno";
             mostrarEquiposAno.Size = new Size(116, 29);
@@ -63,7 +69,8 @@
             // 
             // BttVolver
             // 
-            BttVolver.Location = new Point(823, 507);
+            BttVolver.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            BttVolver.Location = new Point(823, 536);
             BttVolver.Name = "BttVolver";
             BttVolver.Size = new Size(94, 29);
             BttVolver.TabIndex = 2;
@@ -73,7 +80,8 @@
             // 
             // button1
             // 
-            button1.Location = new Point(12, 452);
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            button1.Location = new Point(12, 457);
             button1.Name = "button1";
             button1.Size = new Size(154, 29);
             button1.TabIndex = 3;
@@ -83,7 +91,8 @@
             // 
             // ArqueroCategoria
             // 
-            ArqueroCategoria.Location = new Point(12, 507);
+            ArqueroCategoria.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ArqueroCategoria.Location = new Point(12, 520);
             ArqueroCategoria.Name = "ArqueroCategoria";
             ArqueroCategoria.Size = new Size(154, 29);
             ArqueroCategoria.TabIndex = 4;
@@ -93,6 +102,7 @@
             // 
             // nombresFutbolistas
             // 
+            nombresFutbolistas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             nombresFutbolistas.Location = new Point(12, 350);
             nombresFutbolistas.Name = "nombresFutbolistas";
             nombresFutbolistas.Size = new Size(125, 29);
@@ -103,6 +113,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Location = new Point(12, 327);
             label1.Name = "label1";
@@ -113,6 +124,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Location = new Point(12, 379);
             label2.Name = "label2";
@@ -123,6 +135,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Location = new Point(12, 434);
             label3.Name = "label3";
@@ -132,26 +145,75 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Location = new Point(12, 484);
+            label4.Location = new Point(12, 497);
             label4.Name = "label4";
             label4.Size = new Size(481, 20);
             label4.TabIndex = 9;
             label4.Text = "Listado de Arqueros lesionados pertenecientes a un equipo categoría C";
             label4.Click += label4_Click;
             // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Left;
+            button2.Location = new Point(12, 402);
+            button2.Name = "button2";
+            button2.Size = new Size(116, 29);
+            button2.TabIndex = 1;
+            button2.Text = "equiposAnos";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += mostrarEquiposAno_Click;
+            // 
+            // button3
+            // 
+            button3.Anchor = AnchorStyles.Left;
+            button3.Location = new Point(12, 457);
+            button3.Name = "button3";
+            button3.Size = new Size(154, 29);
+            button3.TabIndex = 3;
+            button3.Text = "futbolistaCategoria";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button1_Click;
+            // 
+            // button4
+            // 
+            button4.Anchor = AnchorStyles.Left;
+            button4.Location = new Point(12, 520);
+            button4.Name = "button4";
+            button4.Size = new Size(154, 29);
+            button4.TabIndex = 4;
+            button4.Text = "arquero Categoria";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += ArqueroCategoria_Click;
+            // 
+            // button5
+            // 
+            button5.Anchor = AnchorStyles.Left;
+            button5.Location = new Point(12, 350);
+            button5.Name = "button5";
+            button5.Size = new Size(125, 29);
+            button5.TabIndex = 5;
+            button5.Text = "nombre futbolista";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += nombresFutbolistas_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(929, 559);
+            ClientSize = new Size(929, 577);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(button5);
+            Controls.Add(button4);
             Controls.Add(nombresFutbolistas);
+            Controls.Add(button3);
             Controls.Add(ArqueroCategoria);
             Controls.Add(button1);
+            Controls.Add(button2);
             Controls.Add(BttVolver);
             Controls.Add(mostrarEquiposAno);
             Controls.Add(dgvAno);
@@ -174,5 +236,9 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private Button button5;
     }
 }
