@@ -16,7 +16,7 @@ namespace TEMPORADA2025_
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@CodigoEquipo", "prb");
+                    command.Parameters.AddWithValue("@CodigoEquipo", "tst");
                     command.Parameters.AddWithValue("@nombre", equipos.Nombre);
                     command.Parameters.AddWithValue("@pais", equipos.Pais);
                     command.Parameters.AddWithValue("@categoria", equipos.Categoria);

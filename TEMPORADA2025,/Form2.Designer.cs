@@ -31,6 +31,7 @@
             dgvAno = new DataGridView();
             mostrarEquiposAno = new Button();
             BttVolver = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvAno).BeginInit();
             SuspendLayout();
             // 
@@ -46,11 +47,11 @@
             // 
             // mostrarEquiposAno
             // 
-            mostrarEquiposAno.Location = new Point(313, 347);
+            mostrarEquiposAno.Location = new Point(182, 347);
             mostrarEquiposAno.Name = "mostrarEquiposAno";
-            mostrarEquiposAno.Size = new Size(94, 29);
+            mostrarEquiposAno.Size = new Size(116, 29);
             mostrarEquiposAno.TabIndex = 1;
-            mostrarEquiposAno.Text = "button1";
+            mostrarEquiposAno.Text = "equiposAnos";
             mostrarEquiposAno.UseVisualStyleBackColor = true;
             mostrarEquiposAno.Click += mostrarEquiposAno_Click;
             // 
@@ -64,11 +65,22 @@
             BttVolver.UseVisualStyleBackColor = true;
             BttVolver.Click += BttVolver_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(320, 347);
+            button1.Name = "button1";
+            button1.Size = new Size(154, 29);
+            button1.TabIndex = 3;
+            button1.Text = "futbolistaCategoria";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(BttVolver);
             Controls.Add(mostrarEquiposAno);
             Controls.Add(dgvAno);
@@ -83,5 +95,6 @@
         private DataGridView dgvAno;
         private Button mostrarEquiposAno;
         private Button BttVolver;
+        private Button button1;
     }
 }
