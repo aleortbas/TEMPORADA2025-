@@ -33,7 +33,7 @@ namespace TEMPORADA2025_
         {
             var startList = new List<anosEquipos>();
 
-            string query = "select codigo_equipo, nombre, año from equipos where año between '1900-01-01' and '1950-12-31';";
+            string query = "select codigo_equipo, nombre, año from equipos where año between '1900' and '1950';";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -43,11 +43,11 @@ namespace TEMPORADA2025_
                     {
                         while (reader.Read())
                         {
-                            var equipo = new anosEquipos // Change the type to 'anosEquipos' to match the list type
+                            var equipo = new anosEquipos 
                             {
                                 CodigoEquipo = reader["codigo_equipo"].ToString(),
                                 Nombre = reader["nombre"].ToString(),
-                                Año = Convert.ToDateTime(reader["año"])
+                                Año = reader.GetInt16(2)
                             };
                             startList.Add(equipo);
                         }

@@ -10,7 +10,7 @@ namespace TEMPORADA2025_.Models
     {
         public string CodigoEquipo { get; set; }
         public string Nombre { get; set; }
-        public DateTime Año { get; set;  }
+        public int Año { get; set;  }
 
     }
 }
