@@ -36,7 +36,7 @@ namespace TEMPORADA2025_
 
                 var newPlayer = new Equipos
                 {
-                    CodigoEquipo = txtNombreEquipo.Text,
+                    CodigoEquipo = codigoEquipo.Text,
                     Nombre = txtNombreEquipo.Text,
                     Pais = txtPaisEquipo.Text,
                     Categoria = Acategoria.Text,
